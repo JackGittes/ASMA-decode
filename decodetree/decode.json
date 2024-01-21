@@ -1,0 +1,102 @@
+[
+  {
+    "arch": "arm64",
+    "files": [
+      {
+        "src": "a64.decode",
+        "extra_args": [
+          "--static-decode=disas_a64"
+        ]
+      },
+      {
+        "src": "sve.decode",
+        "extra_args": "--decode=disas_sve"
+      },
+      {
+        "src": "sme.decode",
+        "extra_args": "--decode=disas_sme"
+      },
+      {
+        "src": "sme-fa64.decode",
+        "extra_args": "--static-decode=disas_sme_fa64"
+      }
+    ]
+  },
+  {
+    "arch": "arm32",
+    "files": [
+      {
+        "src": "neon-shared.decode",
+        "extra_args": "--decode=disas_neon_shared"
+      },
+      {
+        "src": "neon-dp.decode",
+        "extra_args": "--decode=disas_neon_dp"
+      },
+      {
+        "src": "neon-ls.decode",
+        "extra_args": "--decode=disas_neon_ls"
+      },
+      {
+        "src": "vfp.decode",
+        "extra_args": "--decode=disas_vfp"
+      },
+      {
+        "src": "vfp-uncond.decode",
+        "extra_args": "--decode=disas_vfp_uncond"
+      },
+      {
+        "src": "m-nocp.decode",
+        "extra_args": "--decode=disas_m_nocp"
+      },
+      {
+        "src": "mve.decode",
+        "extra_args": "--decode=disas_mve"
+      },
+      {
+        "src": "a32.decode",
+        "extra_args": "--static-decode=disas_a32"
+      },
+      {
+        "src": "a32-uncond.decode",
+        "extra_args": "--static-decode=disas_a32_uncond"
+      },
+      {
+        "src": "t32.decode",
+        "extra_args": "--static-decode=disas_t32"
+      },
+      {
+        "src": "t16.decode",
+        "extra_args": [
+          "-w",
+          "16",
+          "--static-decode=disas_t16"
+        ]
+      }
+    ]
+  },
+  {
+    "arch": "riscv",
+    "files": [
+      {
+        "src": "insn16.decode",
+        "extra_args": [
+          "--static-decode=decode_insn16",
+          "--insnwidth=16"
+        ]
+      },
+      {
+        "src": "insn32.decode",
+        "extra_args": "--static-decode=decode_insn32"
+      },
+      {
+        "src": "xthead.decode",
+        "extra_args": "--static-decode=decode_xthead"
+      },
+      {
+        "src": "XVentanaCondOps.decode",
+        "extra_args": "--static-decode=decode_XVentanaCodeOps"
+      }
+    ]
+  }
+]
