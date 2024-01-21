@@ -1,0 +1,7 @@
+__pycache__/
+*/__pycache__/
+include/gen/
+*.elf
+*.so
+*.o
+*.bin
